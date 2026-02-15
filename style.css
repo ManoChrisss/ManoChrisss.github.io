@@ -484,20 +484,28 @@ section {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    #inicio h1 {
-        font-size: 2.2rem;
+    body {
+        font-size: 16px;
+    }
+
+    #barra-navegacao {
+        padding: 14px 16px;
+    }
+
+    .logo {
+        font-size: 1rem;
     }
 
     .menu-links {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 62px;
         right: 0;
         background: #000;
         width: 100%;
         text-align: center;
-        padding: 30px;
+        padding: 22px 16px;
         margin: auto;
         opacity: 0;
         transform: translateY(-10px);
@@ -508,6 +516,7 @@ section {
 
     .menu-links a {
         margin: 10px 0;
+        font-size: 1rem;
     }
 
     .menu-links.ativo {
@@ -523,9 +532,42 @@ section {
         cursor: pointer;
     }
 
+    #inicio {
+        min-height: 100svh;
+        padding: 80px 20px 30px;
+    }
+
+    #inicio h1 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        line-height: 1.15;
+    }
+
+    #inicio h2 {
+        font-size: 1.05rem;
+    }
+
+    .frase-venda {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.82rem;
+        letter-spacing: 1.2px;
+    }
+
+    section {
+        padding: 64px 20px;
+    }
+
+    .titulo-secao {
+        font-size: 1.55rem;
+        margin-bottom: 28px;
+    }
+
     .conteudo-sobre {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 12px;
     }
 
     .conteudo-sobre .eu {
@@ -543,7 +585,59 @@ section {
         filter: grayscale(0%);
     }
 
+    .grid-habilidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .card-habilidade {
+        padding: 20px 14px;
+    }
+
+    .card-habilidade i {
+        font-size: 2rem;
+    }
+
+    .card-item {
+        min-width: min(84vw, 320px);
+        padding: 16px;
+    }
+
+    #certificados .card-item,
+    #projetos .card-item {
+        width: min(84vw, 320px);
+    }
+
     .imagem-card {
+        height: 190px;
         filter: grayscale(0%);
+    }
+
+    .grid-contato {
+        gap: 24px;
+    }
+
+    .link-contato {
+        font-size: 2.2rem;
+    }
+
+    .link-contato span {
+        opacity: 1;
+        font-size: 0.9rem;
+    }
+
+    .form-whatsapp {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px;
+    }
+
+    .conteudo-modal {
+        width: 94vw;
+        padding: 14px;
+    }
+
+    .midia-modal {
+        max-height: calc(86vh - 28px);
     }
 }
