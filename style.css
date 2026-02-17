@@ -147,10 +147,11 @@ section {
 }
 
 .conteudo-sobre {
-    max-width: 1000px;
+    width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(240px, 320px);
-    gap: 32px;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+    column-gap: clamp(36px, 5vw, 72px);
+    row-gap: 0px;
     align-items: start;
 }
 
@@ -163,15 +164,16 @@ section {
 }
 
 .conteudo-sobre .eu .imagem-card {
-    display: block;
+    display: flex;
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 330px; /**/
+    margin-left: -150px;
+    margin-top: -63px;
     border-radius: 10px;
     object-fit: cover;
     background-color: #333;
     filter: grayscale(100%);
-    margin: 0;
 }
 
 .conteudo-sobre .eu .imagem-card:hover {
@@ -179,6 +181,7 @@ section {
 }
 
 .conteudo-sobre p {
+    max-width: 70%;
     grid-column: 1;
     margin-bottom: 20px;
     color: var(--cor-texto-secundaria);
@@ -478,7 +481,12 @@ section {
     }
 
     .conteudo-sobre .eu .imagem-card {
+        height: auto; /**/
         margin: 0 auto 20px;
+    }
+
+    .conteudo-sobre p {
+        max-width: 100%;
     }
 }
 
@@ -577,7 +585,12 @@ section {
         max-width: 300px;
     }
 
+    .conteudo-sobre p {
+        max-width: 100%;
+    }
+
     .conteudo-sobre .eu .imagem-card {
+        height: auto; /**/
         margin-top: 5px;
         margin-left: 0;
         margin-right: 0;
